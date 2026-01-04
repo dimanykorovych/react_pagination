@@ -17,7 +17,7 @@ export const Pagination: React.FC<Props> = ({
   const pages = Array.from({ length: pageCount }, (_, i) => i + 1);
 
   const handlePageClick = (page: number) => {
-    if (onPageChange) {
+    if (onPageChange && page !== currentPage) {
       onPageChange(page);
     }
   };
